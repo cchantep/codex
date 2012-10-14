@@ -23,4 +23,4 @@ This can be changed.
 
 ## Documentation
 
-See online [Javadoc](https://cchantep.github.com/codex/jtcp/).
+See online [Javadoc](http://cchantep.github.com/codex/jtcp/).
