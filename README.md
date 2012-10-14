@@ -6,3 +6,4 @@ Programming exercices in various languages.
 * `kbs`: Knowledge Base System (CLIPS)
 * `sql`: SQL/database exercices
 * `jlex`: Java lexical scanner
+* `jtcp`: Java TCP networking
