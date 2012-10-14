@@ -20,3 +20,7 @@ This can be changed.
 * `localhost`: Hostname/IP address to connect to the server.
 * `9999`: Port on which the server listens to (there on host `localhost`).
 * `nickname`: Client nickname
+
+## Documentation
+
+See online [Javadoc](https://cchantep.github.com/codex/jtcp/).
