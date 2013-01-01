@@ -92,4 +92,16 @@ object RPNSolverSpec extends Specification {
       PrefixSolver("+- 1 2 3") aka "result" must beLeft("Invalid input: +-")
     }
   }
+
+  "empty input" should {
+    "raise expected error" in {
+      PrefixSolver("") aka "result" must beLeft("Invalid input: ")
+    }
+  }
+
+  "space-only input" should {
+    "raise expected error" in {
+      PrefixSolver("  ") aka "result" must beLeft("No operand found")
+    }
+  }
 }
