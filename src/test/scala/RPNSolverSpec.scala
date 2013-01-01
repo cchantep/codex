@@ -29,6 +29,10 @@ object RPNSolverSpec extends Specification {
     "solve / 300 10 as 30" in {
       PrefixSolver("/ 300 10") aka "result" must beRight(30)
     }
+
+    "raise error for / 1 0" in {
+      PrefixSolver("/ 1 0") aka "result" must beLeft("Arithmetic error")
+    }
   }
 
   "* + 4 5 6" should {
@@ -54,8 +58,8 @@ object RPNSolverSpec extends Specification {
   }
 
   "invalid operand number" should {
-    "raise expected error for +1" in {
-      PrefixSolver("+1") aka "result" must beLeft("Invalid operand number")
+    "raise expected error for + 1" in {
+      PrefixSolver("+ 1") aka "result" must beLeft("Invalid operand number")
     }
 
     "raise expected error for * - 5 6" in {
@@ -68,18 +72,24 @@ object RPNSolverSpec extends Specification {
       PrefixSolver("+") aka "result" must beLeft("No operand found")
     }
 
-    "raise expected error for -/" in {
-      PrefixSolver("-/") aka "result" must beLeft("No operand found")
+    "raise expected error for - /" in {
+      PrefixSolver("- /") aka "result" must beLeft("No operand found")
     }
   }
 
   "input with invalid character(s)" should {
     "raise expected error for + % 1" in {
-      PrefixSolver("+ % 1") aka "result" must beLeft("Invalid input")
+      PrefixSolver("+ % 1") aka "result" must beLeft("Invalid input: %")
     }
 
     "raise expected error for / 2_ 1" in {
-      PrefixSolver("+ % 1") aka "result" must beLeft("Invalid input")
+      PrefixSolver("/ 2_ 1") aka "result" must beLeft("Invalid input: 2_")
+    }
+  }
+
+  "unsplitted operations" should {
+    "raise expected error for +- 1 2 3" in {
+      PrefixSolver("+- 1 2 3") aka "result" must beLeft("Invalid input: +-")
     }
   }
 }
