@@ -12,4 +12,4 @@ Programming exercice in Scala (functionnal programming) about RPN solver.
 
 ## Complete
 
-    Edit file `src/main/scala/RPNSolver.scala`.
+Edit file `src/main/scala/RPNSolver.scala`.
