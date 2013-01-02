@@ -1,9 +1,15 @@
-# CodEx
+# Java RPN solver
 
-Programming exercices in various languages.
+Programming exercice in Java about [RPN](http://en.wikipedia.org/wiki/Reverse_Polish_notation) solver.
 
-* `prolog`: Prolog exercices
-* `kbs`: Knowledge Base System (CLIPS)
-* `sql`: SQL/database exercices
-* `jlex`: Java lexical scanner
-* `jtcp`: Java TCP networking
+## Get sources
+
+    git clone -b rpnsolver-java git://github.com/cchantep/codex.git
+
+## Complete
+
+Edit file `src/main/java/RPNSolver.java`.
+
+## Run tests
+
+    mvn test-compile surefire:test

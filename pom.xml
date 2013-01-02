@@ -1,0 +1,27 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>cchantep-codex</groupId>
+  <artifactId>rpnsolver</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>RPN Solver exercice</name>
+  <description>Programming exercice about RPN solver.</description>
+  <url>https://github.com/cchantep/codex/tree/rpnsolver-java</url>
+
+  <developers>
+    <developer>
+      <id>cchantep</id>
+      <name>Cedric Chantepie</name>
+      <timezone>Europe/Paris</timezone>
+    </developer>
+  </developers>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
